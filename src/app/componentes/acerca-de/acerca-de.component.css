@@ -1,0 +1,11 @@
+*{
+    
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.295), rgba(255,255,255,1)), url(https://cdn.pixabay.com/photo/2016/08/03/09/03/universe-1566159_960_720.jpg)
+}
+
+.acercaDe {
+    padding: 2px;
+    border-style:ridge;
+    border-color: blueviolet;
+    
+}

@@ -1,0 +1,128 @@
+<!--
+  <nav class="container-fluid  navbar-expand-lg navbar-light bg-dark">
+  
+    <div class="row d-flex">
+      <div class="col-2 d-flex ">
+        <a class="navbar-brand " href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+          <img class="logoAPOld" src="./.././../../assets/img/APLogo-20-20.png">
+        </a>
+      </div>
+
+      <div class="col d-flex align-items-center justify-content-start">
+          <h6 class="blanco">#YoProgramo</h6>
+      </div>
+      
+      <div class="col navbar-nav d-flex align-items-center justify-content-end">
+        <a class="nav-link" aria-current="page" href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+     
+    </div>
+    
+  </nav>
+
+
+
+  Nav Bar 2 (flexbox sin container)
+
+
+  <nav>
+  <div class="d-flex navbar-light bg-dark align-items-center justify-content-start">
+    <a class= "navbar-brand" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+      <img id=logoAP src="./.././../../assets/img/APLogo-20-20.png">
+    </a>
+  
+    <div class="flex-fill">
+      <h6 class="blanco">#YoProgramo</h6>
+    </div>
+  
+    <div class="social navbar-nav">
+      <a class= "nav-link" aria-current="page" href="https://www.facebook.com/leanmlopez"><i class="fa-brands fa-facebook fa-xl"></i></a>
+      <a  class= "nav-link" href="https://www.instagram.com/leanmlopez/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+      <a  class= "nav-link" href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+    </div>
+  
+    <div class="login"><button type="button" class="btn btn-dark">Login</button></div>
+  </div> 
+</nav>
+
+
+-->
+
+
+
+
+<header>
+   
+
+  <nav class="navegacion navbar-light bg-dark fixed-top">
+
+    <a class= "navbar-brand" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+      <img id=logoAP src="../../../assets/img/APLogo-20-20.png">
+    </a>
+  
+    <div>
+      <h6 id="YoProgramo" class="blanco"><em>#YoProgramo</em></h6>
+    </div>
+  
+    <div class="social navbar-nav">
+      <a class= "nav-link" aria-current="page" href="https://www.facebook.com/leanmlopez"><i class="fa-brands fa-facebook fa-xl"></i></a>
+      <a  class= "nav-link" href="https://www.instagram.com/leanmlopez/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+      <a  class= "nav-link" href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+    </div>
+  
+    <div class="login"><button type="button" class="btn btn-dark">Login</button></div>
+
+  </nav>
+
+
+
+
+  <div class="container-fluid" id="bannerYPerfil">
+
+
+
+    <div class="row" id="contenedorbanner">
+      <img class= "img-fluid col" id="banner" src="../../../assets/img/banner.png" alt="Banner">
+    </div> 
+
+
+
+
+    <div class="container" id="imgPerfilEInfo">
+
+
+      <div class="row">
+  
+        <img class="col img-thumbnail" [src]= "dataPorfolio.image" id="perfil" alt="Img-Perfil">
+  
+      </div>
+  
+  
+      <div class="row">
+  
+        <div class="col"  id="infoPrincipal">
+          <h1>{{dataPorfolio.name}}</h1>
+          <h4>{{dataPorfolio.position}}</h4>
+          <h6>{{dataPorfolio.ubication}}</h6>
+        </div>
+  
+      </div>
+
+  </div>
+
+
+
+
+
+  
+
+
+  </div>
+
+
+</header>
+
+
+

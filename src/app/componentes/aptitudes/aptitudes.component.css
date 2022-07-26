@@ -1,0 +1,54 @@
+* {
+    color:white;
+}
+
+
+.row {
+    background-color: aqua;
+    height: 200px;
+}
+
+#h2 {
+    background-color: rgb(167, 167, 32);
+}
+#h1 {
+    background-color: beige;
+
+    
+}
+
+#h3 {
+    background-color: rgb(12, 53, 114);
+
+    
+}
+
+#h4 {
+    background-color: rgb(13, 175, 100);
+
+    
+}
+
+#h5 {
+    background-color: rgb(212, 212, 53);
+
+    
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.papa {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    
+}
+
+li {
+    margin-left: 20px;
+}
