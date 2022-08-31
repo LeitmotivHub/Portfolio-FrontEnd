@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  proURL = 'http://localhost:8080/proyectos/';
+  proURL = 'https://portfolioleandrolopezapi.herokuapp.com/proyectos/';   // 'http://localhost:8080/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

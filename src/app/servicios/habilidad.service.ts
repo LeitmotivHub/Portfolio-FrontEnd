@@ -8,7 +8,7 @@ import { Habilidad } from '../model/habilidad';
 })
 export class HabilidadService {
 
-  habURL = 'http://localhost:8080/habilidades/';
+  habURL = 'https://portfolioleandrolopezapi.herokuapp.com/habilidades/';   // 'http://localhost:8080/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
 
