@@ -17,6 +17,8 @@
 </div> 
 -->
 
+
+<!--
 <div class="container col-xxl-8 px-4 py-5 acercaDe">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
@@ -34,11 +36,44 @@
         </div>
       </div>
     </div>
+</div>
+
+-->
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+  <!--  <div class="img-fluid" id="fotoDePerfil" [ngStyle]="{'background': 'url(' +pers.img+ ')  no-repeat 0 0', 'height': '200px', 'width': '200px', 'background-size': 'cover'}">
+        </div>
+  -->
+  <img [src]="pers.img" class="img-fluid" id="fotoDePerfil">
+</div>
+
+
+
+<div class="container">
+<div class="row">
+  
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="nombreYOcupacion">
+      <h1 id="nombre">{{pers.nombre}} {{pers.apellido}}</h1>
+      <h5 id="ocupacion">{{pers.ocupacion}}</h5>
   </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="acercaDe">
+      
+          <h2>Acerca de mí</h2>
+          <p>{{pers.acercaDe}}</p>
+
+          <div class="d-flex justify-content-end" *ngIf="isLogged" id="editarPersona">
+            <button class="btn btn-light" routerLink="/editaracercade/{{pers.id}}">
+                <i class="bi bi-pencil-fill"></i> 
+                EDITAR
+              </button>
+          </div>
+      
+  </div>
+</div> 
+</div>
 
 
 
-  <br>
+
+<br>
 <div class="b-example-divider"></div>
-
 <br>

@@ -1,0 +1,56 @@
+<div id="educacion" class="container px-4 py-5">
+    <div class="container marketing">
+        <div class="row">
+            <div class="col d-flex justify-content-between pb-3 border-bottom" id="tituloEducacion">
+                <h2>
+                  Educación 
+                </h2>
+                <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                  Nueva Educacion
+                </button>
+            </div>
+            
+        </div>
+        
+          <div class="row" *ngFor="let edu of educacion">
+            <div class="col-lg-10 p-lg-4 m-4" id="educacionFor">
+           <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+           <div *ngIf="edu.logoUrl">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" [src]=edu.logoUrl alt="libros">
+           </div>
+           <div *ngIf="!edu.logoUrl">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://us.123rf.com/450wm/olegdudko/olegdudko1907/olegdudko190704637/129158844-pila-de-libros-en-la-biblioteca-y-desenfoque-de-fondo-de-la-estanter%C3%ADa-imagen.jpg?ver=6" alt="libros">
+           </div>
+           <br>
+           
+    
+            <div id="infoEducacion">
+              <h2>{{edu.carrera}}</h2>
+            <h5>{{edu.institucion}}</h5>
+            
+            <h6>Periodo cursado: {{edu.fechaInicio}} - {{edu.fechaEgreso}} </h6>
+            </div>
+
+            <br>
+            <br>
+            <div id="botones" *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editedu/{{edu.id}}">
+                  <i class="bi bi-pencil-fill"></i> EDITAR</button>
+              <button class="btn btn-danger" (click)="delete(edu.id)">
+                  <i class="bi bi-trash-fill"></i> BORRAR</button>
+            </div>
+
+
+          </div>
+
+
+          <!-- /.col-lg-4 -->
+          <!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+     
+        
+    </div>
+</div>
+
+<br>
+<br>

@@ -1,0 +1,13 @@
+footer{
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px -2px 20px 1px rgba(248, 62, 164, 0.9) ;
+    text-shadow: 2px -2px 5px rgba(248, 62, 164, 0.8) ;
+}
+
+p {
+    margin: 0px 0px 5px;
+}

@@ -1,37 +1,101 @@
-<div class="container padre">
+<div class="container padre px-4 py-5" id="habilidades">
 
-    <div class="row row-cols-1  row-cols-lg-3 justify-content-start d-flex align-content-stretch flex-wrap">
-        <div class="col" id="h1">
-            asdasd
+    <div class="container marketing">
+    <div class="row">
+
+        <div class="col d-flex justify-content-between pb-3 border-bottom" id="tituloHabilidades">
+            <h1>Habilidades</h1>
+
+            <button type="button" class="btn btn-dark" routerLink="/nuevahab" *ngIf="isLogged">
+                Nueva Habilidad
+            </button>
+
+
+        </div>
+        
+    </div>
+
+    <div class="row row-cols-1  row-cols-lg-3 justify-content-sm-evenly d-flex align-content-stretch flex-wrap">
+
+        <div class="text-center col-sm-4 col-md-4 col-lg-4"  *ngFor="let habilidad of habCast">
+
+            <div *ngIf= "habilidad.logoUrl">
+
+                <circle-progress
+                    [percent]= habilidad.porcentajeDeDominio
+                    [radius]="90"
+                    [imageSrc]="habilidad.logoUrl"
+                    [showImage]="true"
+                    [title]="habilidad.nombreHabilidad"
+                    [titleColor]="'violet'"
+                    [titleFontSize]="'2em'"
+                    [imageHeight]="70"
+                    [imageWidth]="70"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [outerStrokeGradient]="true"
+                    [outerStrokeGradientStopColor]="'violet'"
+                    [outerStrokeWidth]="7"
+                    [innerStrokeWidth]="2"
+                    [outerStrokeColor]="'#c20067'"
+                    [innerStrokeColor]="'grey'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [space] = "9"
+                    [showBackground]="true"
+                    [backgroundGradient]="true"
+                    [backgroundColor]="'violet'"
+                    [backgroundOpacity]="0.09"
+                    [backgroundGradientStopColor]="'red'"
+                    [backgroundPadding]="8"
+                ></circle-progress>
+                
+            </div>
+            <div *ngIf= "!habilidad.logoUrl">
+
+                <circle-progress
+                    [percent]= habilidad.porcentajeDeDominio
+                    [radius]="90"
+                    [imageSrc]="habilidad.logoUrl"
+                    [showImage]="false"
+                    [title]="habilidad.nombreHabilidad"
+                    [titleColor]="'violet'"
+                    [titleFontSize]="'2em'"
+                    [imageHeight]="70"
+                    [imageWidth]="70"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [outerStrokeGradient]="true"
+                    [outerStrokeGradientStopColor]="'violet'"
+                    [outerStrokeWidth]="7"
+                    [innerStrokeWidth]="2"
+                    [outerStrokeColor]="'#c20067'"
+                    [innerStrokeColor]="'grey'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [space] = "9"
+                    [showBackground]="true"
+                    [backgroundGradient]="true"
+                    [backgroundColor]="'violet'"
+                    [backgroundOpacity]="0.09"
+                    [backgroundGradientStopColor]="'red'"
+                    [backgroundPadding]="8"
+                ></circle-progress>
+                
+            </div>
+
+            <div id="botones" *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/edithab/{{habilidad.id}}">
+                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                <button class="btn btn-danger" (click)="delete(habilidad.id)">
+                    <i class="bi bi-trash-fill"></i> BORRAR</button>
+              </div>
         </div>
 
-        <div class="col" id="h2">sdads</div>
-        <div class="col" id="h3">sdads</div>
-        <div class="col" id="h4">sdads</div>
-        <div class="col" id="h5">sdads</div>
+        
+    </div>
     </div>
 </div>
 
 
-<div class="papa">
-    <ul>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-        <li>
-            <a href="">asdasdasdasd</a>
-        </li>
-    </ul>
-</div>
+<br>

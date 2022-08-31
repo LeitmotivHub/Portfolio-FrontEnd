@@ -1,0 +1,60 @@
+  <div class="container px-4 py-5" id="proyectos">
+    <div class="row">
+      <div class="col d-flex justify-content-between pb-2 border-bottom" id="tituloProyectos">
+          <h2>
+            Proyectos 
+          </h2>
+          <button type="button" class="btn btn-dark" routerLink="/nuevopro" *ngIf="isLogged">
+            Nuevo Proyecto
+          </button>
+      </div>
+      
+  </div>
+
+  <div class="row" *ngFor="let proyecto of pro">
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <div id="enlace">Ir a Proyecto</div>
+            <a target="_blank" [href]="proyecto.urlProyecto">
+              <img *ngIf="proyecto.imgUrl" [src]="proyecto.imgUrl" alt="">
+
+
+              <img *ngIf="!proyecto.imgUrl" src="https://img.freepik.com/vector-gratis/ilustracion-vector-concepto-abstracto-ciclo-vida-proyecto-gestion-exitosa-proyectos-etapas-finalizacion-proyecto-asignacion-tareas-caso-negocio-metafora-abstracta-requisitos-recursos_335657-2941.jpg?w=740&t=st=1660150867~exp=1660151467~hmac=74594cd65d39458c3dac38a4c0250836a71a6ebe7146b0d8e2fe017b241c40f3" alt="">
+
+
+
+            </a>
+            
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{proyecto.titulo}}
+
+            </h2>
+
+            <h4>{{proyecto.descripcion}}</h4>
+            <p>{{proyecto.fechaDeLanzamiento}}</p>
+            <div id="botones" *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editpro/{{proyecto.id}}">
+                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+            <button class="btn btn-danger" (click)="delete(proyecto.id)">
+                <i class="bi bi-trash-fill"></i> BORRAR</button>
+          </div>
+          <br>
+          
+        </div>
+      </div>
+          </div>
+
+          
+
+      
+    </div>
+
+  </div>
+  </div>
+
+
+  <br>
+  <br>
+  

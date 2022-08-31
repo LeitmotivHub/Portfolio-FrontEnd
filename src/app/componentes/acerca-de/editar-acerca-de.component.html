@@ -1,0 +1,55 @@
+<div class="container" *ngIf="pers">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="pers.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="ocupacion">Ocupacion</label>
+                    <input type="text" class="form-control" id="ocupacion" name="ocupacion" [(ngModel)]="pers.ocupacion" required>
+                </div>
+                <div class="form-group">
+                    <label for="img">Url de foto de Perfil</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="pers.img" required>
+                </div>
+                <div class="form-group">
+                    <label for="acercaDe">Acerca de mi</label>
+                    <input type="text" class="form-control" id="acercaDe" name="acercaDe" [(ngModel)]="pers.acercaDe" required>
+                </div>
+                <div class="form-group">
+                    <label for="banner">Url de Banner</label>
+                    <input type="text" class="form-control" id="banner" name="banner" [(ngModel)]="pers.banner" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkedinUrl">Url de LinkedIn</label>
+                    <input type="text" class="form-control" id="linkedinUrl" name="linkedinUrl" [(ngModel)]="pers.linkedinUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="githubUrl">Url de GitHub</label>
+                    <input type="text" class="form-control" id="githubUrl" name="githubUrl" [(ngModel)]="pers.githubUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="igUrl">Url de Instagram</label>
+                    <input type="text" class="form-control" id="igUrl" name="igUrl" [(ngModel)]="pers.igUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="twitterUrl">Url de Twitter</label>
+                    <input type="text" class="form-control" id="twitterUrl" name="twitterUrl" [(ngModel)]="pers.twitterUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="pers.email" required>
+                </div>
+                <button class="btn btn-primary">
+                    Actualizar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

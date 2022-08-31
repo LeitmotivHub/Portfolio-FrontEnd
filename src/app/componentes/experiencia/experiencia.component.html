@@ -1,0 +1,135 @@
+<!--<section>
+    <div class="container-fluid">
+        <h1>Educacion</h1>
+        <ul class="items-list">
+            <li>
+                <div class="data-container"></div>
+            </li>
+
+
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+
+    </div>
+
+
+</section>
+-->
+
+
+
+
+
+
+<div class="container px-4 py-5" id="featured-3"  id="experiencia">
+ <!--   <h2 class="pb-2 border-bottom">Experiencia</h2>
+
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
+
+        <ul class="items-list">
+
+            <li *ngFor="let educacion of exp">
+
+                <div class="feature-icon bg-secundary bg-gradient">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+                </div>
+                <br>
+                
+                <div class="data-container feature col">
+                    <a class="d-flex" href="#">
+
+                        <div class="logo-image-container">
+                            <img class="logo-image" [src]=educacion.img alt="">
+                        </div>
+    
+                        <div class="list-info">
+                            <h2><strong>{{educacion.school}}</strong></h2>
+                            <h4>{{educacion.career}}</h4>
+                            <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
+                            
+                        </div>
+    
+    
+                    </a>
+
+                    <button href="#" class="btn-edit btn-dark">
+                        <i class="fa-solid fa-square-pen"></i>
+                    </button>
+
+                </div>
+            </li>
+        </ul>
+      
+      
+      
+    </div>-->
+
+
+    <div class="row">
+        <div class="pb-3 border-bottom justify-content-between d-flex" id="tituloExperiencia">
+            <h1 class="col-lg-10">Experiencia laboral</h1>
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Nueva Experiencia
+                </button>
+            </div>
+
+        </div>
+    
+        <div class="col-lg-12">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th><h4>Puesto</h4> </th>
+                        <th><h4>Compañia</h4></th>
+                        <th><h4>Actividades realizadas</h4></th>
+                        <th><h4>Periodo de actividad</h4></th>
+                        <th></th>
+                    </tr>
+                    <tr *ngFor="let experiencia of exp">
+
+                        <td> <div *ngIf="experiencia.logo"> <a target="_blank" [href]=experiencia.urlEmpresa><img id="logo" [src]=experiencia.logo alt=""></a>
+                            </div>
+
+                            <div *ngIf="!experiencia.logo">
+                                <img id="logo" src="https://cdn2.hubspot.net/hubfs/3900096/blog-portada-imagen-corporativa.jpg" alt="empresa">
+                            </div>
+                        </td>
+
+
+                        <td>
+                            <h2>{{experiencia.puesto}}</h2>
+                        </td>
+                        <td><h5>{{experiencia.empresa}}</h5></td>
+
+                        <td><h6>{{experiencia.actividades}}</h6></td>
+                        <td><h6>Desde {{experiencia.inicio}} - Hasta {{experiencia.egreso}}</h6></td>
+                        <td id="contenedorBotones" *ngIf="isLogged">
+                            <div id="botones">
+                                <button class="btn btn-light" routerLink="/editexp/{{experiencia.id}}">
+                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            
+                                <button class="btn btn-danger" (click)="delete(experiencia.id)">
+                                    <i class="bi bi-trash-fill"></i> BORRAR</button>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+<br><br>

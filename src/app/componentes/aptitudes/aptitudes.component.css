@@ -1,54 +1,95 @@
 * {
-    color:white;
+    color:rgb(227, 183, 236);
+    
 }
 
 
 .row {
-    background-color: aqua;
-    height: 200px;
+    height: auto;
 }
 
-#h2 {
-    background-color: rgb(167, 167, 32);
-}
-#h1 {
-    background-color: beige;
-
-    
-}
-
-#h3 {
-    background-color: rgb(12, 53, 114);
-
-    
+#habilidades {
+    background: url(https://img.freepik.com/vector-gratis/fondo-granulado-degradado-dinamico_23-2148963687.jpg?w=740&t=st=1660272185~exp=1660272785~hmac=a062ed8009a2dfea51c707a2057a227e05f979e6610cffa32779aa86448d93f9)
+    no-repeat center center fixed;
+    background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
 }
 
-#h4 {
-    background-color: rgb(13, 175, 100);
-
-    
-}
-
-#h5 {
-    background-color: rgb(212, 212, 53);
-
-    
+h1 {
+    margin-bottom: 5px;
+    padding: 0px;
 }
 
 
-a {
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+  }
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+    border: solid rgba(255, 255, 255, 0.733);
+    border-width: 1px 0;
+   
+  }
+
+
+  a {
     text-decoration: none;
-}
+  }
 
-.papa {
-    display: flex;
-}
+  .list-info {
+    margin-left: 40px;
+    color: rgb(151, 117, 180);
+    transition: all .4s ease-in-out;
+  }
 
-ul {
-    display: flex;
-    
-}
+  .list-info:hover {
+    transform: scale(1.2);
+  }
 
-li {
-    margin-left: 20px;
-}
+  button {
+    transition: all .3s ease-in-out;
+    opacity: 90%;
+    background: none;
+  }
+
+  button:hover {
+    transform: scale(1.2);
+  }
+
+  #tituloHabilidades {
+    margin-bottom: 50px;
+  }
+
+
+
+  #botones {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
